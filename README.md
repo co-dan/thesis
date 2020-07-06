@@ -17,6 +17,8 @@ developed for my thesis.
 The folders `stdpp` and `iris` contain compatible dependencies.
 (Specifically, the std++ library and the Iris framework)
 
+Please consult the `README.md` files in the subfolders.
+
 # Cloning and compiling
 
 Requires [Coq](https://coq.inria.fr/) version >= 8.11.0.
