@@ -23,12 +23,13 @@ Please consult the `README.md` files in the subfolders.
 
 Requires [Coq](https://coq.inria.fr/) version >= 8.11.0.
 
-Clone the repository, and run
-
+Clone the repository, and download the submodules:
 ```
 git submodule init
 git submodule update
 ```
+(or clone with `git clone --recurse-submodules`)
+
 
 Then compile and install the dependencies:
 
