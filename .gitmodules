@@ -10,3 +10,6 @@
 [submodule "lambdac"]
 	path = lambdac
 	url = https://gitlab.mpi-sws.org/iris/c/
+[submodule "seloc"]
+	path = seloc
+	url = https://github.com/co-dan/SeLoC
