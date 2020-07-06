@@ -7,3 +7,6 @@
 [submodule "stdpp"]
 	path = stdpp
 	url = https://gitlab.mpi-sws.org/iris/stdpp
+[submodule "lambdac"]
+	path = lambdac
+	url = https://gitlab.mpi-sws.org/iris/c/
