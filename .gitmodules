@@ -1,0 +1,9 @@
+[submodule "reloc"]
+	path = reloc
+	url = https://gitlab.mpi-sws.org/iris/reloc
+[submodule "iris"]
+	path = iris
+	url = https://gitlab.mpi-sws.org/iris/iris
+[submodule "stdpp"]
+	path = stdpp
+	url = https://gitlab.mpi-sws.org/iris/stdpp
