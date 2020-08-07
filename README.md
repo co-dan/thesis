@@ -50,3 +50,12 @@ You can install it from opam:
 opam repo add coq-released https://coq.inria.fr/opam/released
 opam install coq-equations.1.2.1+8.11
 ```
+
+## Installing with `opam`
+
+Alterenatively you can try the following:
+
+```
+opam pin coq-stdpp.dev ./stdpp
+opam pin coq-iris.dev ./iris
+``
