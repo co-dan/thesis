@@ -24,7 +24,10 @@ Please consult the `README.md` files in the subfolders.
 Requires [Coq](https://coq.inria.fr/) version >= 8.11.1 (but it might work with older versions as well).
 You can also use `opam` for installing the packages.
 
-Clone the repository with `git clone --recurse-submodules` (or download submodules with `git submodule init` and `git submodule update`).
+Clone the repository with
+```
+git clone --recurse-submodules https://github.com/co-dan/thesis.git
+```
 Then compile and install the dependencies:
 
 ```bash
