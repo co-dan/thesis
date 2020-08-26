@@ -13,3 +13,6 @@
 [submodule "seloc"]
 	path = seloc
 	url = https://github.com/co-dan/SeLoC
+[submodule "autosubst"]
+	path = autosubst
+	url = https://github.com/RalfJung/autosubst

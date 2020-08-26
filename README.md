@@ -1,4 +1,4 @@
-Formalizations/Coq code for my thesis
+Formalizations/Coq code for my thesis.
 
 # About
 
@@ -14,41 +14,43 @@ developed for my thesis.
   See the overview paper [Compositional Non-Interference for Fine-Grained Concurrent Programs](https://arxiv.org/abs/1910.00905).
 
 
-The folders `stdpp` and `iris` contain compatible dependencies.
-(Specifically, the std++ library and the Iris framework)
+The folders `stdpp`, `iris`, and `autosubst` contain compatible dependencies.
+(Specifically, the std++ library, the Iris framework, and the autosubst library)
 
 Please consult the `README.md` files in the subfolders.
 
 # Cloning and compiling
 
-Requires [Coq](https://coq.inria.fr/) version >= 8.11.0.
+Requires [Coq](https://coq.inria.fr/) version >= 8.11.1 (but it might work with older versions as well).
+You can also use `opam` for installing the packages.
 
-Clone the repository, and download the submodules:
-```
-git submodule init
-git submodule update
-```
-(or clone with `git clone --recurse-submodules`)
-
-
+Clone the repository with `git clone --recurse-submodules` (or download submodules with `git submodule init` and `git submodule update`).
 Then compile and install the dependencies:
 
-```
+```bash
 cd stdpp
 make -j2
 make install
 cd ../iris
 make -j2
 make install
+cd ../autosubst
+make -j2
+make install
+cd ..
 ```
 
-Then you can compile and work with the rest of the source code.
+Then you can compile and work with the rest of the source code, e.g.
+```bash
+cd reloc
+make -j2
+```
 
 To compile `seloc` you also need the [Equations](https://github.com/mattam82/Coq-Equations) plugin.
 You can install it from opam:
-```
+```bash
 opam repo add coq-released https://coq.inria.fr/opam/released
-opam install coq-equations.1.2.1+8.11
+opam install coq-equations.1.2.1+8.11     # pick an appropriate version
 ```
 
 ## Installing with `opam`
