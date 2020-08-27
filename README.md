@@ -14,10 +14,10 @@ developed for my thesis.
   See the overview paper [Compositional Non-Interference for Fine-Grained Concurrent Programs](https://arxiv.org/abs/1910.00905).
 
 
-The folders `stdpp`, `iris`, and `autosubst` contain compatible dependencies.
-(Specifically, the std++ library, the Iris framework, and the autosubst library)
+The folders `stdpp`, `iris`, and `autosubst` contain compatible versions of the dependencies.
+The folder `prelim` contains the formalizations of the propositions from Chapter 2.
 
-Please consult the `README.md` files in the subfolders.
+Please consult the `README.md` files in the subfolders for details.
 
 # Cloning and compiling
 
@@ -31,7 +31,7 @@ git clone --recurse-submodules https://github.com/co-dan/thesis.git
 Then compile and install the dependencies:
 
 ```bash
-cd stdpp
+cd thesis/stdpp
 make -j2
 make install
 cd ../iris
