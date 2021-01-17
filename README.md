@@ -53,7 +53,7 @@ To compile `seloc` you also need the [Equations](https://github.com/mattam82/Coq
 You can install it from opam:
 ```bash
 opam repo add coq-released https://coq.inria.fr/opam/released
-opam install coq-equations.1.2.1+8.11     # pick an appropriate version
+opam install coq-equations.1.2.3+8.12     # pick a version number corresponding to your Coq version
 ```
 
 ## Installing with `opam`

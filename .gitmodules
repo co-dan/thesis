@@ -15,4 +15,4 @@
 	url = https://github.com/co-dan/SeLoC
 [submodule "autosubst"]
 	path = autosubst
-	url = https://github.com/RalfJung/autosubst
+	url = https://github.com/coq-community/autosubst.git

@@ -89,7 +89,7 @@ Section list.
   Proof.
     simpl.
     iDestruct 1 as (hd ->) "Hhd".
-    wp_rec. wp_pures. iSplit; eauto.
+    wp_rec. wp_pures. iModIntro. iSplit; eauto.
   Qed.
 
   Lemma wp_lltail v h ws :
@@ -137,10 +137,10 @@ Section list.
     iLöb as "IH" forall (l ws).
     wp_rec. wp_pures.
     destruct ws as [|h ws]; simpl.
-    - iDestruct "Hl" as "->". wp_pures. repeat iSplit; eauto.
+    - iDestruct "Hl" as "->". wp_pures. iModIntro. repeat iSplit; eauto.
       iRight. iSplit; eauto. iPureIntro. set_solver.
     - iDestruct "Hl" as (t ->) "Ht". wp_pures.
-      case_bool_decide; wp_pures.
+      case_bool_decide; wp_pures; try iModIntro.
       + iSplitL. { iExists _; eauto. }
         iLeft. iSplit; eauto. iPureIntro; set_solver.
       + iSpecialize ("IH" with "Ht").
@@ -182,7 +182,7 @@ Section mset.
     wp_rec. wp_bind (llnil #()).
     iApply wp_wand; first iApply wp_llnil.
     iIntros (v) "Hv". wp_alloc r as "Hr".
-    iExists _,_,_. iFrame. iSplit; eauto. iPureIntro.
+    iExists _,_,_. iFrame. iModIntro. iSplit; eauto. iPureIntro.
     split; eauto || econstructor.
   Qed.
 
@@ -196,7 +196,7 @@ Section mset.
     wp_load. wp_pures. wp_bind (llcons _ _).
     iApply (wp_wand with "[Hws]").
     { iApply (wp_llcons with "Hws"). }
-    iIntros (v) "Hv". wp_store. iSplit; eauto.
+    iIntros (v) "Hv". wp_store. iModIntro. iSplit; eauto.
     iExists _,_,_. iFrame. iSplit; eauto.
     iPureIntro. destruct_and!. rewrite NoDup_cons. set_solver.
   Qed.
@@ -228,7 +228,7 @@ Section mset.
     iDestruct 1 as (hd ws l ->) "(Hl & _ & _)".
     wp_rec. wp_bind (llnil #()).
     iApply wp_wand; first iApply wp_llnil.
-    iIntros (v) "Hv". wp_store. iSplit; eauto.
+    iIntros (v) "Hv". wp_store. iModIntro. iSplit; eauto.
     iExists _,_,_. iFrame "Hl Hv".
     iSplit; eauto. iPureIntro.
     split; eauto || econstructor.

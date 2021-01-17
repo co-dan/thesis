@@ -201,7 +201,7 @@ Section oneshot.
   Proof.
     unfold prog2. wp_alloc x as "Hx".
     iMod new_pending as (γ) "Hp".
-    iMod (inv_alloc N _ (( pending γ ∗ x ↦ -) ∨ (shot γ  ∗ (x ↦ #0 ∨ x ↦ #1)))%I
+    iMod (inv_alloc N _ (( pending γ ∗ (∃ v, x ↦ v) ) ∨ (shot γ  ∗ (x ↦ #0 ∨ x ↦ #1)))%I
             with "[Hx Hp]") as "#H".
     { iNext. iLeft; iFrame. eauto with iFrame. }
     wp_pures. wp_apply wp_fork.
