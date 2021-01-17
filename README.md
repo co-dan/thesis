@@ -7,7 +7,7 @@ developed for my thesis.
 
 - `lambdac`: λMC – monadic translation, and the corresponding logic,
   of a mini C fragment into HeapLang.
-  See the overview paper [Semi-automated reasoning about non-determinism in C expressions](http://cs.ru.nl/~dfrumin/wpc/iris-c-monad.pdf). 
+  See the overview paper [Semi-automated reasoning about non-determinism in C expressions](https://iris-project.org/pdfs/2019-esop-c.pdf). 
 - `reloc`: ReLoC - a logic for proving contexutal refinements.
   See the overview paper [ReLoC Reloaded: A Mechanized Relational Logic for Fine-Grained Concurrency and Logical Atomicity](https://arxiv.org/abs/2006.13635).
 - `seloc`: SeLoC - a logic for proving non-interference.
@@ -19,9 +19,9 @@ The folder `prelim` contains the formalizations of the propositions from Chapter
 
 Please consult the `README.md` files in the subfolders for details.
 
-# Cloning and compiling
+# Compilation instructions
 
-Requires [Coq](https://coq.inria.fr/) version >= 8.11.1 (but it might work with older versions as well).
+Requires [Coq](https://coq.inria.fr/) version >= 8.12 (but it might work with older versions as well).
 You can also use `opam` for installing the packages.
 
 Clone the repository with
@@ -56,7 +56,7 @@ opam repo add coq-released https://coq.inria.fr/opam/released
 opam install coq-equations.1.2.3+8.12     # pick a version number corresponding to your Coq version
 ```
 
-## Installing with `opam`
+## Installing dependencies with `opam`
 
 Alterenatively you can try the following:
 
