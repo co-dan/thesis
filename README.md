@@ -1,4 +1,5 @@
 Formalizations/Coq code for my thesis.
+See also the [official webpage](https://groupoid.moe/thesis.html).
 
 # About
 
